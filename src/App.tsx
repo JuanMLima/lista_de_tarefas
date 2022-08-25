@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as C from './App.styles';
 import { Item } from './types/Item';
-
+import { ListItem } from './components/ListItem';
 const App = () => {
     const [list, setList] = useState<Item[]>([
         { id: 1, name: 'comprar o pão na padaria', done: false },
@@ -17,7 +17,7 @@ const App = () => {
                 {/* Área para adicionar nova tarefa */}
 
                 {list.map((item, index) => (
-                    <div>{item.name}</div>
+                    <ListItem/>
                 ))}
             </C.Area>
         </C.Container>
